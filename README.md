@@ -20,13 +20,13 @@ This small project was created based on [Kylie Ying's](https://www.youtube.com/c
 
 ## Technologies were used:
 
-- [python](https://www.python.org/) was used as the the core language of the project.
-- [nltk package](https://www.nltk.org/) was used in order to be able to work with pattern package.
-- [pattern package](https://stackabuse.com/python-for-nlp-introduction-to-the-pattern-library/) was used to pluralize nouns where it is needed.
+- [Python](https://www.python.org/) was used as the the core language of the project.
+- [NLTK Package](https://www.nltk.org/) was used in order to be able to work with pattern package.
+- [Pattern Package](https://stackabuse.com/python-for-nlp-introduction-to-the-pattern-library/) was used to pluralize nouns where it is needed.
 
 ## Credits
 
--List of Uncountable Nouns was made based on the [7ESL](https://7esl.com/uncountable-nouns/) 
+- List of Uncountable Nouns was made based on the [7ESL](https://7esl.com/uncountable-nouns/) 
 
 
 
