@@ -32,9 +32,11 @@ def verb_formatting(verb):
   if verb[-1] == 'y':
     formatted_verb = verb[:-1] + 'ies'
 
-  elif verb[-1] == 'o':
-    formatted_verb = verb + 'es'
-    
+  elif verb == 'have':
+    formatted_verb = verb[:-2] + 's'
+
+  elif verb[-1] == 'o' or verb[-1] == 's':
+    formatted_verb = verb + 'es'    
 
   else:
     formatted_verb = verb + 's'
