@@ -149,6 +149,17 @@ def choosing_a_quantifier(noun):
   return 'several'
 
 
-madlib = f'A {choosing_article(adj1)} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.\n{formatting_pronoun(noun1)} sees {famous_person.capitalize()} {verb_infinitive(verb2)}.\n{noun1.capitalize()}  and {famous_person.capitalize()} decide to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.\n"It will cost an arm and a leg!" - sad {noun1}.\n"Do not worry!\nI have a lot of {plural_noun(noun4)}!\nI can afford it!"\n"As you wish, {famous_person.capitalize()}\nYou see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.\nIf you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)},let\'s get it!" - says {noun1}.\nAnd they started walking towards {choosing_article(size_adjective2)} {color_adjective1} {noun6}'
+madlib = f'''
+{choosing_article(adj1).capitalize()} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.
+{formatting_pronoun(noun1)} sees {famous_person.title()} {verb_infinitive(verb2)}.
+{noun1.capitalize()}  and {famous_person.title()} decide to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
+"It will cost an arm and a leg!" - sad {noun1}.
+"Do not worry!
+I have a lot of {plural_noun(noun4)}!
+I can afford it!"
+"As you wish, {famous_person.title()}
+You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
+If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)},let\'s get it!" - says {noun1}.
+And they started walking towards {choosing_article(size_adjective2)} {color_adjective1} {noun6}.'''
 
 print(madlib)
