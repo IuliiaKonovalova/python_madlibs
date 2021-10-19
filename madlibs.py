@@ -22,10 +22,11 @@ verb2 = input('Type a verb: ')
 
 verb3 = input('Type a verb: ')
 noun3 = input('Type a noun: ')
-color_adjective = input('Type a color adjective: ')
 size_adjective = input('Type a size adjective: ')
+color_adjective = input('Type a color adjective: ')
 
 noun4 = input('Type a noun: ')
+noun5 = input('Type a noun: ')
 
 
 
@@ -60,6 +61,8 @@ def verb_formatting(verb):
   else:
     formatted_verb = verb + 's'
   return formatted_verb
+
+
 
 def formatting_pronoun(noun1):
 
@@ -105,11 +108,41 @@ def verb_infinitive(verb):
 
 
 def plural_noun(noun):
+
+  """
+  Checks whether the noun is countable or not and transform into plural if it's countable
+  """
+
   if noun in uncountable_nouns:
     return noun
   return pluralize(noun)
 
 
-madlib = f'A {adj1} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.\n{formatting_pronoun(noun1)} sees {famous_person} {verb_infinitive(verb2)}.\n{noun1.capitalize()}  and {famous_person} decide to {verb3} and have a {color_adjective} {size_adjective} {noun3} together.\n"It will cost an arm and a leg!" - sad {noun1}.\n"Do not worry! I have a lot of {plural_noun(noun4)}'
+
+def choosing_article(word):
+
+  """
+  Checks
+  """
+
+  if word[0] in dictionary_letters['vowels']:
+    return f'a {word}'
+  else: 
+    return f'n {word}'
+
+
+
+def choosing_a_quantifier(noun):
+
+  """
+  Checks whether the noun is countable or not and transform into plural if it's countable
+  """
+
+  if noun in uncountable_nouns:
+    return 'some'
+  return 'several'
+
+
+madlib = f'A {choosing_article(adj1)} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.\n{formatting_pronoun(noun1)} sees {famous_person.capitalize()} {verb_infinitive(verb2)}.\n{noun1.capitalize()}  and {famous_person.capitalize()} decide to {verb3} and have {choosing_article(size_adjective)} {color_adjective} {noun3} together.\n"It will cost an arm and a leg!" - sad {noun1}.\n"Do not worry!\nI have a lot of {plural_noun(noun4)}!\nI can afford it!"\n"As you wish, {famous_person.capitalize()}\nYou see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}. If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)}"'
 
 print(madlib)
