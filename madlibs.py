@@ -132,9 +132,9 @@ def choosing_article(word):
   """
 
   if word[0] in dictionary_letters['vowels']:
-    return f'a {word}'
+    return f'an {word}'
   else: 
-    return f'n {word}'
+    return f'a {word}'
 
 
 
@@ -160,6 +160,6 @@ I can afford it!"
 "As you wish, {famous_person.title()}
 You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
 If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)},let\'s get it!" - says {noun1}.
-And they started walking towards {choosing_article(size_adjective2)} {color_adjective1} {noun6}.'''
+And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.'''
 
 print(madlib)
