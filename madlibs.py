@@ -220,14 +220,14 @@ It was already night when {famous_person.title()} noticed {choosing_article(size
 "Oh, yes! But look at this old {noun7} in the bushes!" - says the {noun1}.
 The old {noun7} started walking slowly towards {famous_person.title()} and the {noun1}.
 Then, they saw that {formatting_pronoun(noun7)} was carrying a golden coin.
-As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} {verb4} and handed out that golden coin to them and left silently.
+As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} started{verb_infinitive(verb4)} and handed out that golden coin to them and left silently.
 {famous_person.title()} looked at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 "What is written there?" - asked the {noun1}.
 "{random_idiom()[0]}" - read out loud {famous_person.title()}.
 "That's strange..." - {famous_person.title()} added.
 "Why the text and the rose on the coin are {color_adjective2}?" - pondered the {adj1} {noun1}.
-"Maybe because the {choosing_article(size_adjective2)} {noun6} is {color_adjective2}?" - {famous_person.title()} replayed to {formatting_personal_pronoun(noun1)}.
+"Maybe because the {size_adjective2} {noun6} is {color_adjective2}?" - {famous_person.title()} replayed to {formatting_personal_pronoun(noun1)}.
 As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, they both yelled:
 
 1. {random_idiom()[1][0]}
