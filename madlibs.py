@@ -32,6 +32,8 @@ size_adjective2 = input('Type a size adjective: ')
 color_adjective2 = input('Type a color adjective: ')
 noun6 = input('Type a noun: ')
 
+noun7 = input('Type a noun (living thing): ')
+verb4 = input('Type a verb: ')
 
 
 
@@ -151,15 +153,26 @@ def choosing_a_quantifier(noun):
 
 madlib = f'''
 {choosing_article(adj1).capitalize()} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.
-{formatting_pronoun(noun1)} sees {famous_person.title()} {verb_infinitive(verb2)}.
-{noun1.capitalize()}  and {famous_person.title()} decide to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
-"It will cost an arm and a leg!" - sad {noun1}.
+{formatting_pronoun(noun1).capitalize()} sees {famous_person.title()} {verb_infinitive(verb2)}.
+{choosing_article(noun1).capitalize()}  and {famous_person.title()} decide to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
+"It will cost an arm and a leg!" - sad the {noun1}.
 "Do not worry!
 I have a lot of {plural_noun(noun4)}!
 I can afford it!"
 "As you wish, {famous_person.title()}
 You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
-If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)},let\'s get it!" - says {noun1}.
-And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.'''
+If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)},let\'s get it!" - says the {noun1}.
+And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.
+It was already night when {famous_person.title()} {choosing_article(size_adjective2)} {noun6}.
+"Can you see it? We are here!" - says {famous_person.title()} while pointing at the {noun6}.
+"Oh, yes! But look at this old {noun7} in the bushes!" - says the {noun1}.
+The old {noun7} started walking slowly towards {famous_person.title()} and the {noun6}.
+Then, they saw that {formatting_pronoun(noun7)} was carrying a golden coin.
+As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} {verb4} and handed out that golden coin to them and left silently.
+{famous_person.title()} look at the coin...
+There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
+"What is written there?" - asked the {noun1}.
+
+'''
 
 print(madlib)
