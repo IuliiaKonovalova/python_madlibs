@@ -43,6 +43,7 @@ verb4 = input('Type a verb: ')
 
 
 
+
 dictionary_gender = {
   'female': ['girl', 'woman', 'lady', 'babygirl'],
   'male': ['man', 'boy', 'babyboy', 'gentleman', ]
@@ -158,7 +159,25 @@ def choosing_a_quantifier(noun):
 def random_idiom():
   shuffle_idioms = list(idioms_dictionary.keys())
   random.shuffle(shuffle_idioms)
-  return shuffle_idioms[0]
+  shuffle_meanings = list(idioms_dictionary.values())
+  random.shuffle(shuffle_meanings)
+  get_key_idiom = shuffle_idioms[0]
+  print(get_key_idiom)
+
+  meanings = []
+
+  main_meaning = idioms_dictionary[shuffle_idioms[0]]
+  print(main_meaning)
+  meanings.append(main_meaning)
+  print(meanings)
+
+  for i in range(3):
+    mean = random.choice(shuffle_meanings)
+    meanings.append(mean)
+  main_list = [shuffle_idioms[0], meanings]
+  return main_list
+
+
 
 
 
@@ -183,8 +202,11 @@ As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronou
 {famous_person.title()} look at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 "What is written there?" - asked the {noun1}.
-"{random_idiom()}"
-
+"{random_idiom()[0]}"
+"Look...!"
+1. {random_idiom()[1][0]}
+2. {random_idiom()[1][1]}
+3. {random_idiom()[1][2]}
 '''
 
 print(madlib)
