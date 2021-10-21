@@ -193,8 +193,9 @@ def random_idiom():
   print(main_meaning)
   meanings.append(main_meaning)
   print(meanings)
+  
 
-  for i in range(3):
+  for mean in range(3):
     mean = random.choice(shuffle_meanings)
     meanings.append(mean)
   main_list = [shuffle_idioms[0], meanings]
@@ -207,29 +208,29 @@ def random_idiom():
 madlib = f'''
 {choosing_article(adj1).capitalize()} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.
 {formatting_pronoun(noun1).capitalize()} sees {famous_person.title()} {verb_infinitive(verb2)}.
-{choosing_article(noun1).capitalize()}  and {famous_person.title()} decide to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
+{choosing_article(noun1).capitalize()}  and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
 "It will cost an arm and a leg!" - sad the {noun1}.
 "Do not worry!
 I have a lot of {plural_noun(noun4)}!
 I can afford it!"
 "As you wish, {famous_person.title()}
 You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
-If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)},let\'s get it!" - says the {noun1}.
+If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)}, let\'s get it!" - says the {noun1}.
 And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.
-It was already night when {famous_person.title()} {choosing_article(size_adjective2)} {noun6}.
+It was already night when {famous_person.title()} noticed {choosing_article(size_adjective2)} {noun6}.
 "Can you see it? We are here!" - says {famous_person.title()} while pointing at the {noun6}.
 "Oh, yes! But look at this old {noun7} in the bushes!" - says the {noun1}.
-The old {noun7} started walking slowly towards {famous_person.title()} and the {noun6}.
+The old {noun7} started walking slowly towards {famous_person.title()} and the {noun1}.
 Then, they saw that {formatting_pronoun(noun7)} was carrying a golden coin.
 As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} {verb4} and handed out that golden coin to them and left silently.
-{famous_person.title()} look at the coin...
+{famous_person.title()} looked at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 "What is written there?" - asked the {noun1}.
 "{random_idiom()[0]}" - read out loud {famous_person.title()}.
 "That's strange..." - {famous_person.title()} added.
 "Why the text and the rose on the coin are {color_adjective2}?" - pondered the {adj1} {noun1}.
 "Maybe because the {choosing_article(size_adjective2)} {noun6} is {color_adjective2}?" - {famous_person.title()} replayed to {formatting_personal_pronoun(noun1)}.
-As soon as they got closer to the {choosing_article(size_adjective2)} {color_adjective2} {noun6}, they both yelled:
+As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, they both yelled:
 
 1. {random_idiom()[1][0]}
 2. {random_idiom()[1][1]}
