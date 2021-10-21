@@ -78,16 +78,16 @@ def verb_formatting(verb):
 
 
 
-def formatting_pronoun(noun1):
+def formatting_pronoun(noun):
 
   """
   Checks the noun whether it is a female or male noun  
   """
 
-  if noun1 in dictionary_gender['female']:
+  if noun in dictionary_gender['female']:
     pronoun = 'she'
 
-  elif noun1 in dictionary_gender['male']:
+  elif noun in dictionary_gender['male']:
     pronoun = 'he'
 
   else:
@@ -97,7 +97,8 @@ def formatting_pronoun(noun1):
 
 def formatting_personal_pronoun(noun):
   """
-  Checks the noun whether it is a female or male noun  
+  Checks the noun whether it is a female or male noun
+  and places the correct personal pronoun when it is needed 
   """
 
   if noun in dictionary_gender['female']:
@@ -171,6 +172,14 @@ def choosing_a_quantifier(noun):
   return 'several'
 
 def random_idiom():
+
+  """
+  Takes random idiom from the dictionary,
+  Takes its meaning
+  Takes 3 more meanings of random idioms from the dictionary
+  Returns nested list
+  """
+
   shuffle_idioms = list(idioms_dictionary.keys())
   random.shuffle(shuffle_idioms)
   shuffle_meanings = list(idioms_dictionary.values())
