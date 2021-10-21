@@ -26,7 +26,8 @@ This small project was created based on [Kylie Ying's](https://www.youtube.com/c
 
 ## Credits
 
-- List of Uncountable Nouns was made based on the [7ESL](https://7esl.com/uncountable-nouns/) 
+- List of Uncountable Nouns was made based in the [7ESL](https://7esl.com/uncountable-nouns/).
+- dictionary for idioms were made out of the tables published by [EF](https://www.ef.edu/english-resources/english-idioms/)
 
 
 
