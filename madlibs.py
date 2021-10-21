@@ -5,9 +5,14 @@ import nltk
 nltk.set_proxy('127.0.0.1:41091')
 nltk.download('wordnet')
 
-from uncountable_nouns import uncountable_nouns
-
 from pattern.en import pluralize
+
+import random
+
+from uncountable_nouns import uncountable_nouns
+from idioms import idioms_dictionary
+
+
 
 # Creating variables
 
@@ -150,6 +155,12 @@ def choosing_a_quantifier(noun):
     return 'some'
   return 'several'
 
+def random_idiom():
+  shuffle_idioms = list(idioms_dictionary.keys())
+  random.shuffle(shuffle_idioms)
+  return shuffle_idioms[0]
+
+
 
 madlib = f'''
 {choosing_article(adj1).capitalize()} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.
@@ -172,6 +183,7 @@ As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronou
 {famous_person.title()} look at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 "What is written there?" - asked the {noun1}.
+"{random_idiom()}"
 
 '''
 
