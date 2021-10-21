@@ -128,7 +128,7 @@ def plural_noun(noun):
 def choosing_article(word):
 
   """
-  Checks
+  Checks which article to use before the word and place the article before it
   """
 
   if word[0] in dictionary_letters['vowels']:
