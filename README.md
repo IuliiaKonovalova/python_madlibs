@@ -8,7 +8,7 @@ This small project was created based on [Kylie Ying's](https://www.youtube.com/c
 
 1. Add function which converts verb from input into an infinitive form.
 
-1. Add function which assigns the correct pronoun in the madlib string.
+1. Add function which assigns the correct pronoun in the madlib formatted string.
 
 1. Add function which checks whether the noun is countable or not, and transform the noun into plural form if it is countable.
 
@@ -16,7 +16,13 @@ This small project was created based on [Kylie Ying's](https://www.youtube.com/c
 
 1. Add function which chooses the correct quantifier for the noun.
 
+1. Add function which picks a random idiom and its meaning, and adding to more random meanings of other random idioms for the quiz in a story.
+
 1. Add additional file which consists list of uncountable nouns.
+
+1. Add additional file for gender words dictionary.
+
+1. Add additional file for idioms dictionary.
 
 ## Technologies were used:
 
