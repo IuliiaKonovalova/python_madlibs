@@ -81,7 +81,7 @@ def verb_formatting(verb):
 def formatting_pronoun(noun1):
 
   """
-  Checks the noun1 whether it is a female or male noun  
+  Checks the noun whether it is a female or male noun  
   """
 
   if noun1 in dictionary_gender['female']:
@@ -93,9 +93,23 @@ def formatting_pronoun(noun1):
   else:
     pronoun = 'it'
     
-  return pronoun.capitalize()
+  return pronoun
 
+def formatting_personal_pronoun(noun):
+  """
+  Checks the noun whether it is a female or male noun  
+  """
 
+  if noun in dictionary_gender['female']:
+    pronoun = 'her'
+
+  elif noun in dictionary_gender['male']:
+    pronoun = 'him'
+
+  else:
+    pronoun = 'it'
+    
+  return pronoun
 
 
 def verb_infinitive(verb):
@@ -202,8 +216,12 @@ As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronou
 {famous_person.title()} look at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 "What is written there?" - asked the {noun1}.
-"{random_idiom()[0]}"
-"Look...!"
+"{random_idiom()[0]}" - read out loud {famous_person.title()}.
+"That's strange..." - {famous_person.title()} added.
+"Why the text and the rose on the coin are {color_adjective2}?" - pondered the {adj1} {noun1}.
+"Maybe because the {choosing_article(size_adjective2)} {noun6} is {color_adjective2}?" - {famous_person.title()} replayed to {formatting_personal_pronoun(noun1)}.
+As soon as they got closer to the {choosing_article(size_adjective2)} {color_adjective2} {noun6}, they both yelled:
+
 1. {random_idiom()[1][0]}
 2. {random_idiom()[1][1]}
 3. {random_idiom()[1][2]}
