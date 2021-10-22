@@ -13,6 +13,8 @@ from uncountable_nouns import uncountable_nouns
 from idioms import idioms_dictionary
 from gender_words import dictionary_gender
 
+from colorama import Fore, Back, Style
+
 
 # Creating variables
 
@@ -297,6 +299,7 @@ def run_the_time_error():
 run_the_time_error()
 
 madlib = f'''
+{Fore.GREEN}
 {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to a {adj2} {noun2}.
 {formatting_pronoun(noun1).capitalize()} sees {famous_person.title()} {verb_infinitive(verb2)}.
 {choosing_article(noun1).capitalize()}  and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
