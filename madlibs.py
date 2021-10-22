@@ -5,7 +5,7 @@ import nltk
 nltk.set_proxy('127.0.0.1:41091')
 nltk.download('wordnet')
 
-from pattern.en import pluralize, conjugate
+from pattern.en import pluralize, conjugate, PAST
 
 import random
 
@@ -268,7 +268,7 @@ def random_idiom():
 
   
 
-  for mean in range(3):
+  for mean in range(4):
     mean = random.choice(shuffle_meanings)
     meanings.append(mean)
   random.shuffle(meanings)
@@ -325,6 +325,7 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 1. {idioms_list[1][0]}
 2. {idioms_list[1][1]}
 3. {idioms_list[1][2]}
+4. {idioms_list[1][3]}
 '''
 
 print(madlib)
