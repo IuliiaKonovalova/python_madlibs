@@ -5,7 +5,7 @@ import nltk
 nltk.set_proxy('127.0.0.1:41091')
 nltk.download('wordnet')
 
-from pattern.en import pluralize
+from pattern.en import pluralize, conjugate
 
 import random
 
@@ -14,65 +14,79 @@ from idioms import idioms_dictionary
 from gender_words import dictionary_gender
 
 
-
+# >>> from pattern.en import conjugate
+# >>> verb = "go"
+# conjugate_en(verb, tense = "future")
+# >>> conjugate(verb, 
+# ...     tense = "past",           # INFINITIVE, PRESENT, PAST, FUTURE
+# ...    person = 3,                # 1, 2, 3 or None
+# ...    number = "singular",       # SG, PL
+# ...      mood = "indicative",     # INDICATIVE, IMPERATIVE, CONDITIONAL, SUBJUNCTIVE
+# ...    aspect = "imperfective",   # IMPERFECTIVE, PERFECTIVE, PROGRESSIVE 
+# ...   negated = False)            # True or False
+# u'went'
 
 # Creating variables
-def enter_words():
-  adj1 = ''
-  noun1 = ''
-  verb1 = ''
-  adj2 = ''
-  noun2 = ''
-  famous_person = ''
-  verb2 = ''
-  verb3 = ''
-  noun3 = ''
-  size_adjective1 = ''
-  color_adjective1 = ''
-  noun4 = ''
-  noun5 = ''
-  size_adjective2 = ''
-  color_adjective2 = ''
-  noun6 = ''
-  noun7 = ''
-  verb4 = ''
 
-  while not (len(adj1) >= 2 and adj1.isalpha()):
-    adj1 = input('Type an adjective: ')
-  while not (len(noun1) >= 2 and noun1.isalpha()):
-    noun1 = input('Type a noun (living thing): ')
-  while not (len(verb1) >= 2 and verb1.isalpha()):
-    verb1 = input('Type a verb: ')
-  while not (len(adj2) >= 2 and adj2.isalpha()):
-    adj2 = input('Type an adjective: ')
-  while not (len(noun2) >= 2 and noun2.isalpha()):
-    noun2 = input('Type a noun: ')
-  while not (len(famous_person) >= 2 and famous_person.isalpha()):
-    famous_person = input("Type a famous person: ")
-  while not (len(verb2) >= 2 and verb2.isalpha()):
-    verb2 = input('Type a verb: ')
-  while not (len(verb3) >= 2 and verb3.isalpha()):
-    verb3 = input('Type a verb: ')
-  while not (len(noun3) >= 2 and noun3.isalpha()):
-    noun3 = input('Type a noun: ')
-  while not (len(size_adjective1) >= 2 and size_adjective1.isalpha()):
-    size_adjective1 = input('Type a size adjective: ')
-  while not (len(color_adjective1) >= 2 and color_adjective1.isalpha()):
-    color_adjective1 = input('Type a color adjective: ')
-  while not (len(noun4) >= 2 and noun4.isalpha()):
-    noun4 = input('Type a noun: ')
-  while not (len(noun5) >= 2 and noun5.isalpha()):
-    noun5 = input('Type a noun: ')
-  while not (len(size_adjective2) >= 2 and size_adjective2.isalpha()):
-    size_adjective2 = input('Type a size adjective: ')
-  while not (len(color_adjective2) >= 2 and color_adjective2.isalpha()):
-    color_adjective2 = input('Type a color adjective: ')
-  while not (len(noun6) >= 2 and noun6.isalpha()):
-    noun6 = input('Type a noun: ')
-  while not (len(noun7) >= 2 and noun7.isalpha()):
-    noun7 = input('Type a noun: ')
-  while not (len(verb4) >= 2 and verb4.isalpha()):
-    verb4 = input('Type a verb: ')
+  # """
+  # Ask user for the input,
+  # checks whether the input is legible
+  # """
+# adj1 = ''
+# noun1 = ''
+# verb1 = ''
+# adj2 = ''
+# noun2 = ''
+# famous_person = ''
+# verb2 = ''
+# verb3 = ''
+# noun3 = ''
+# size_adjective1 = ''
+# color_adjective1 = ''
+# noun4 = ''
+# noun5 = ''
+# size_adjective2 = ''
+# color_adjective2 = ''
+# noun6 = ''
+# noun7 = ''
+# verb4 = ''
+
+# while not (len(adj1) >= 2 and adj1.isalpha()):
+#     adj1 = input('Type an adjective: ')
+# while not (len(noun1) >= 2 and noun1.isalpha()):
+#     noun1 = input('Type a noun (living thing): ')
+# while not (len(verb1) >= 2 and verb1.isalpha()):
+#     verb1 = input('Type a verb: ')
+# while not (len(adj2) >= 2 and adj2.isalpha()):
+#     adj2 = input('Type an adjective: ')
+# while not (len(noun2) >= 2 and noun2.isalpha()):
+#     noun2 = input('Type a noun: ')
+# while not (len(famous_person) >= 2 and famous_person.isalpha()):
+#     famous_person = input("Type a famous person: ")
+# while not (len(verb2) >= 2 and verb2.isalpha()):
+#     verb2 = input('Type a verb: ')
+# while not (len(verb3) >= 2 and verb3.isalpha()):
+#     verb3 = input('Type a verb: ')
+# while not (len(noun3) >= 2 and noun3.isalpha()):
+#     noun3 = input('Type a noun: ')
+# while not (len(size_adjective1) >= 2 and size_adjective1.isalpha()):
+#     size_adjective1 = input('Type a size adjective: ')
+# while not (len(color_adjective1) >= 2 and color_adjective1.isalpha()):
+#     color_adjective1 = input('Type a color adjective: ')
+# while not (len(noun4) >= 2 and noun4.isalpha()):
+#     noun4 = input('Type a noun: ')
+# while not (len(noun5) >= 2 and noun5.isalpha()):
+#     noun5 = input('Type a noun: ')
+# while not (len(size_adjective2) >= 2 and size_adjective2.isalpha()):
+#     size_adjective2 = input('Type a size adjective: ')
+# while not (len(color_adjective2) >= 2 and color_adjective2.isalpha()):
+#     color_adjective2 = input('Type a color adjective: ')
+# while not (len(noun6) >= 2 and noun6.isalpha()):
+#     noun6 = input('Type a noun: ')
+# while not (len(noun7) >= 2 and noun7.isalpha()):
+#     noun7 = input('Type a noun: ')
+# while not (len(verb4) >= 2 and verb4.isalpha()):
+#     verb4 = input('Type a verb: ')
 
 # adj1 = input('Type an adjective: ')
 # noun1 = input('Type a noun (living thing): ')
@@ -98,9 +112,25 @@ def enter_words():
 # noun7 = input('Type a noun (living thing): ')
 # verb4 = input('Type a verb: ')
 
-enter_words()
 
-
+adj1 = 'go'
+noun1 = 'cat'
+verb1 = 'show'
+adj2 = 'furry'
+noun2 = 'robot'
+famous_person = 'bjorn'
+verb2 = 'stop'
+verb3 = 'cry'
+noun3 = 'pill'
+size_adjective1 = 'huge'
+color_adjective1 = 'red'
+noun4 = 'pill'
+noun5 = 'bus'
+size_adjective2 = 'tiny'
+color_adjective2 = 'blue'
+noun6 = 'stamp'
+noun7 = 'queen'
+verb4 = 'sneeze'
 
 
 
@@ -239,25 +269,26 @@ def random_idiom():
   random.shuffle(shuffle_idioms)
   shuffle_meanings = list(idioms_dictionary.values())
   random.shuffle(shuffle_meanings)
-  get_key_idiom = shuffle_idioms[0]
-  print(get_key_idiom)
+  # get_key_idiom = shuffle_idioms[0]
+  # print(get_key_idiom)
 
   meanings = []
 
   main_meaning = idioms_dictionary[shuffle_idioms[0]]
-  print(main_meaning)
+  # print(main_meaning)
   meanings.append(main_meaning)
-  print(meanings)
+
   
 
   for mean in range(3):
     mean = random.choice(shuffle_meanings)
     meanings.append(mean)
+  random.shuffle(meanings)
   main_list = [shuffle_idioms[0], meanings]
   return main_list
 
 
-random_idiom()
+idioms_list = random_idiom()
 
 
 madlib = f'''
@@ -281,15 +312,15 @@ As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronou
 {famous_person.title()} looked at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 "What is written there?" - asked the {noun1}.
-"{random_idiom()[0]}" - read out loud {famous_person.title()}.
+"{idioms_list[0]}" - read out loud {famous_person.title()}.
 "That's strange..." - {famous_person.title()} added.
 "Why the text and the rose on the coin are {color_adjective2}?" - pondered the {adj1} {noun1}.
 "Maybe because the {size_adjective2} {noun6} is {color_adjective2}?" - {famous_person.title()} replayed to {formatting_personal_pronoun(noun1)}.
 As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, they both yelled:
 
-1. {random_idiom()[1][0]}
-2. {random_idiom()[1][1]}
-3. {random_idiom()[1][2]}
+1. {idioms_list[1][0]}
+2. {idioms_list[1][1]}
+3. {idioms_list[1][2]}
 '''
 
 print(madlib)
