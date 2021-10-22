@@ -113,7 +113,7 @@ from gender_words import dictionary_gender
 # verb4 = input('Type a verb: ')
 
 
-adj1 = 'go'
+adj1 = 'easy-going'
 noun1 = 'cat'
 verb1 = 'show'
 adj2 = 'furry'
@@ -291,8 +291,10 @@ def random_idiom():
 idioms_list = random_idiom()
 
 
+
+
 madlib = f'''
-{choosing_article(adj1).capitalize()} {noun1} {verb_formatting(verb1)} and goes to a {adj2} {noun2}.
+{choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and goes to a {adj2} {noun2}.
 {formatting_pronoun(noun1).capitalize()} sees {famous_person.title()} {verb_infinitive(verb2)}.
 {choosing_article(noun1).capitalize()}  and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
 "It will cost an arm and a leg!" - sad the {noun1}.
