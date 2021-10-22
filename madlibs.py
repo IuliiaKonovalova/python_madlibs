@@ -14,18 +14,6 @@ from idioms import idioms_dictionary
 from gender_words import dictionary_gender
 
 
-# >>> from pattern.en import conjugate
-# >>> verb = "go"
-# conjugate_en(verb, tense = "future")
-# >>> conjugate(verb, 
-# ...     tense = "past",           # INFINITIVE, PRESENT, PAST, FUTURE
-# ...    person = 3,                # 1, 2, 3 or None
-# ...    number = "singular",       # SG, PL
-# ...      mood = "indicative",     # INDICATIVE, IMPERATIVE, CONDITIONAL, SUBJUNCTIVE
-# ...    aspect = "imperfective",   # IMPERFECTIVE, PERFECTIVE, PROGRESSIVE 
-# ...   negated = False)            # True or False
-# u'went'
-
 # Creating variables
 
   # """
@@ -291,7 +279,14 @@ def random_idiom():
 idioms_list = random_idiom()
 
 
+def run_the_time_error():
 
+  try:
+    conjugate(verb = '', tense = PAST)
+  except:
+    pass
+
+run_the_time_error()
 
 madlib = f'''
 {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and goes to a {adj2} {noun2}.
