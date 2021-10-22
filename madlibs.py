@@ -280,7 +280,14 @@ idioms_list = random_idiom()
 
 
 def run_the_time_error():
-
+  """
+  Prevent "RuntimeError: generator raised StopIteration"
+  The package has raised StopIteration that was missed in python earier versions; thus, it worked before. 
+  Since the package has not been updates since August 2018
+  "PEP 479 is enabled for all code in Python >= 3.7, meaning that StopIteration exceptions raised directly or indirectly in coroutines and generators are transformed into RuntimeError exceptions."
+  Link to this change:
+  https://docs.python.org/3/whatsnew/3.7.html#changes-in-python-behavior
+  """
   try:
     conjugate(verb = '', tense = PAST)
   except:
