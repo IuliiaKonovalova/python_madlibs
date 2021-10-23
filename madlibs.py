@@ -356,7 +356,7 @@ def main():
   Main program function
   """
 
-  # os.system('cls' if os.name == 'nt' else 'clear')
+  os.system('cls' if os.name == 'nt' else 'clear')
   print(f'''
   {Fore.GREEN}Welcome to {Fore.YELLOW}Another Madlib Game!
   ''')
