@@ -117,7 +117,7 @@ noun3 = 'pill'
 size_adjective1 = 'huge'
 color_adjective1 = 'red'
 noun4 = 'pill'
-noun5 = 'bus'
+noun5 = 'compass'
 size_adjective2 = 'tiny'
 color_adjective2 = 'blue'
 noun6 = 'stamp'
@@ -303,7 +303,7 @@ run_the_time_error()
 
 def main_mad():
   madlib = f'''
-{Fore.GREEN}
+{Style.BRIGHT}
 {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to a {adj2} {noun2}.
 {formatting_pronoun(noun1).capitalize()} sees {famous_person.title()} {verb_infinitive(verb2)}.
 {choosing_article(noun1).capitalize()}  and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
