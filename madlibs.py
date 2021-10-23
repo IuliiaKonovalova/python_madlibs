@@ -336,4 +336,4 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 print(madlib)
 
 def main():
-  
+  print(f'Welcome to {Fore.YELLOW}Another Madlib Game')
