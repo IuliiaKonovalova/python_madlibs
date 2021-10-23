@@ -105,24 +105,7 @@ from simple_term_menu import TerminalMenu
 # verb4 = input('Type a verb: ')
 
 
-adj1 = 'easy-going'
-noun1 = 'cat'
-verb1 = 'show'
-adj2 = 'furry'
-noun2 = 'robot'
-famous_person = 'bjorn'
-verb2 = 'stop'
-verb3 = 'cry'
-noun3 = 'pill'
-size_adjective1 = 'huge'
-color_adjective1 = 'red'
-noun4 = 'pill'
-noun5 = 'compass'
-size_adjective2 = 'tiny'
-color_adjective2 = 'blue'
-noun6 = 'stamp'
-noun7 = 'queen'
-verb4 = 'sneeze'
+
 
 
 
@@ -299,6 +282,7 @@ run_the_time_error()
 
 
 def main_mad():
+  
   madlib = f'''
 {Style.BRIGHT}
 {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to a {adj2} {noun2}.
@@ -334,7 +318,7 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 4. {idioms_list[1][3]}
 '''
   print(madlib)
-# print(madlib)
+
 
 
 
@@ -352,11 +336,15 @@ def main():
   """
   Main program function
   """
-
+  # Clears the terminal
   os.system('cls' if os.name == 'nt' else 'clear')
+
+  # Shows welcoming message
   print(f'''
   {Fore.GREEN}Welcome to {Fore.YELLOW}Another Madlib Game!
   ''')
+
+  # Presents options for the user
   options = ['1. Learn the rules', '2. Start the game', '3. Quit']
   main_menu = TerminalMenu(options)
   quitting = False
@@ -365,7 +353,6 @@ def main():
     options_choice = options[optionsIndex]
     if (options_choice == '3. Quit'):
       quitting = True
-      # os.system('cls' if os.name == 'nt' else 'clear')
 
     elif (options_choice == '1. Learn the rules'):
       show_the_rules()
