@@ -343,9 +343,9 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 
 def show_the_rules():
   print(f'''
-  {Fore.GREEN}1. {Fore.YELLOW}Follow the instructions!
-  {Fore.GREEN}2. {Fore.YELLOW}Type the words correctly!
-  {Fore.GREEN}3. {Fore.YELLOW}Don\'t cheat!
+  {Fore.YELLOW}1. {Fore.GREEN}Follow the instructions!
+  {Fore.YELLOW}2. {Fore.GREEN}Type the words correctly!
+  {Fore.YELLOW}3. {Fore.GREEN}Don\'t cheat!
   ''')
 
 
