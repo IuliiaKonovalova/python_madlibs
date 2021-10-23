@@ -1,6 +1,6 @@
 
 import nltk
-
+import os
 
 nltk.set_proxy('127.0.0.1:41091')
 nltk.download('wordnet')
@@ -339,7 +339,12 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 
 
 
-
+def show_the_rules():
+  print(f'''
+  {Fore.GREEN}1. {Fore.YELLOW}Follow the instructions!
+  {Fore.GREEN}2. {Fore.YELLOW}Type the words correctly!
+  {Fore.GREEN}3. {Fore.YELLOW}Don\'t cheat!
+  ''')
 
 
 
@@ -352,21 +357,21 @@ def main():
   # os.system('cls' if os.name == 'nt' else 'clear')
   print(f'''
   {Fore.GREEN}Welcome to {Fore.YELLOW}Another Madlib Game!
-
-  {Fore.GREEN}Just enter word which asked by the program and try not to make mistakes.
-  If you do, blame is on you!
-  If you try to cheat, the program will ask you to type a correct word again and again
   ''')
-  options = ['1. Start', '2. Quit']
+  options = ['1. Learn the rules', '2. Start the game', '3. Quit']
   main_menu = TerminalMenu(options)
   quitting = False
   while quitting == False:
     optionsIndex = main_menu.show()
-    optionsChoice = options[optionsIndex]
-    if optionsChoice == 'Quit':
+    options_choice = options[optionsIndex]
+    if (options_choice == '3. Quit'):
       quitting = True
+      # os.system('cls' if os.name == 'nt' else 'clear')
+
+    elif (options_choice == '1. Learn the rules'):
+      show_the_rules()
     else:
-      print(optionsChoice)
+      print(options_choice)
 
 
 
