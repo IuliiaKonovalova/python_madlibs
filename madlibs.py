@@ -300,7 +300,9 @@ def run_the_time_error():
 
 run_the_time_error()
 
-madlib = f'''
+
+def main_mad():
+  madlib = f'''
 {Fore.GREEN}
 {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to a {adj2} {noun2}.
 {formatting_pronoun(noun1).capitalize()} sees {famous_person.title()} {verb_infinitive(verb2)}.
@@ -334,7 +336,7 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 3. {idioms_list[1][2]}
 4. {idioms_list[1][3]}
 '''
-
+  print(madlib)
 # print(madlib)
 
 
@@ -371,13 +373,13 @@ def main():
     elif (options_choice == '1. Learn the rules'):
       show_the_rules()
     else:
-      print(options_choice)
+      main_mad()
 
 
 
 
 
-  print(madlib)
+  
 
 
 
