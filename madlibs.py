@@ -261,16 +261,13 @@ def random_idiom():
   random.shuffle(shuffle_idioms)
   shuffle_meanings = list(idioms_dictionary.values())
   random.shuffle(shuffle_meanings)
-  # get_key_idiom = shuffle_idioms[0]
-  # print(get_key_idiom)
+
 
   meanings = []
 
   main_meaning = idioms_dictionary[shuffle_idioms[0]]
-  # print(main_meaning)
-  meanings.append(main_meaning)
 
-  
+  meanings.append(main_meaning)
 
   for mean in range(4):
     mean = random.choice(shuffle_meanings)
