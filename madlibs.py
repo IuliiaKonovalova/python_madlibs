@@ -15,6 +15,8 @@ from gender_words import dictionary_gender
 
 from colorama import Fore, Back, Style
 
+from simple_term_menu import TerminalMenu
+
 
 # Creating variables
 
@@ -41,42 +43,42 @@ from colorama import Fore, Back, Style
 # noun7 = ''
 # verb4 = ''
 
-# while not (len(adj1) >= 2 and adj1.isalpha()):
-#     adj1 = input('Type an adjective: ')
-# while not (len(noun1) >= 2 and noun1.isalpha()):
-#     noun1 = input('Type a noun (living thing): ')
-# while not (len(verb1) >= 2 and verb1.isalpha()):
-#     verb1 = input('Type a verb: ')
-# while not (len(adj2) >= 2 and adj2.isalpha()):
-#     adj2 = input('Type an adjective: ')
-# while not (len(noun2) >= 2 and noun2.isalpha()):
-#     noun2 = input('Type a noun: ')
-# while not (len(famous_person) >= 2 and famous_person.isalpha()):
-#     famous_person = input("Type a famous person: ")
-# while not (len(verb2) >= 2 and verb2.isalpha()):
-#     verb2 = input('Type a verb: ')
-# while not (len(verb3) >= 2 and verb3.isalpha()):
-#     verb3 = input('Type a verb: ')
-# while not (len(noun3) >= 2 and noun3.isalpha()):
-#     noun3 = input('Type a noun: ')
-# while not (len(size_adjective1) >= 2 and size_adjective1.isalpha()):
-#     size_adjective1 = input('Type a size adjective: ')
-# while not (len(color_adjective1) >= 2 and color_adjective1.isalpha()):
-#     color_adjective1 = input('Type a color adjective: ')
-# while not (len(noun4) >= 2 and noun4.isalpha()):
-#     noun4 = input('Type a noun: ')
-# while not (len(noun5) >= 2 and noun5.isalpha()):
-#     noun5 = input('Type a noun: ')
-# while not (len(size_adjective2) >= 2 and size_adjective2.isalpha()):
-#     size_adjective2 = input('Type a size adjective: ')
-# while not (len(color_adjective2) >= 2 and color_adjective2.isalpha()):
-#     color_adjective2 = input('Type a color adjective: ')
-# while not (len(noun6) >= 2 and noun6.isalpha()):
-#     noun6 = input('Type a noun: ')
-# while not (len(noun7) >= 2 and noun7.isalpha()):
-#     noun7 = input('Type a noun: ')
-# while not (len(verb4) >= 2 and verb4.isalpha()):
-#     verb4 = input('Type a verb: ')
+  # while not (len(adj1) >= 2 and adj1.isalpha()):
+  #     adj1 = input('Type an adjective: ')
+  # while not (len(noun1) >= 2 and noun1.isalpha()):
+  #     noun1 = input('Type a noun (living thing): ')
+  # while not (len(verb1) >= 2 and verb1.isalpha()):
+  #     verb1 = input('Type a verb: ')
+  # while not (len(adj2) >= 2 and adj2.isalpha()):
+  #     adj2 = input('Type an adjective: ')
+  # while not (len(noun2) >= 2 and noun2.isalpha()):
+  #     noun2 = input('Type a noun: ')
+  # while not (len(famous_person) >= 2 and famous_person.isalpha()):
+  #     famous_person = input("Type a famous person: ")
+  # while not (len(verb2) >= 2 and verb2.isalpha()):
+  #     verb2 = input('Type a verb: ')
+  # while not (len(verb3) >= 2 and verb3.isalpha()):
+  #     verb3 = input('Type a verb: ')
+  # while not (len(noun3) >= 2 and noun3.isalpha()):
+  #     noun3 = input('Type a noun: ')
+  # while not (len(size_adjective1) >= 2 and size_adjective1.isalpha()):
+  #     size_adjective1 = input('Type a size adjective: ')
+  # while not (len(color_adjective1) >= 2 and color_adjective1.isalpha()):
+  #     color_adjective1 = input('Type a color adjective: ')
+  # while not (len(noun4) >= 2 and noun4.isalpha()):
+  #     noun4 = input('Type a noun: ')
+  # while not (len(noun5) >= 2 and noun5.isalpha()):
+  #     noun5 = input('Type a noun: ')
+  # while not (len(size_adjective2) >= 2 and size_adjective2.isalpha()):
+  #     size_adjective2 = input('Type a size adjective: ')
+  # while not (len(color_adjective2) >= 2 and color_adjective2.isalpha()):
+  #     color_adjective2 = input('Type a color adjective: ')
+  # while not (len(noun6) >= 2 and noun6.isalpha()):
+  #     noun6 = input('Type a noun: ')
+  # while not (len(noun7) >= 2 and noun7.isalpha()):
+  #     noun7 = input('Type a noun: ')
+  # while not (len(verb4) >= 2 and verb4.isalpha()):
+  #     verb4 = input('Type a verb: ')
 
 # adj1 = input('Type an adjective: ')
 # noun1 = input('Type a noun (living thing): ')
@@ -333,7 +335,45 @@ As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, 
 4. {idioms_list[1][3]}
 '''
 
-print(madlib)
+# print(madlib)
+
+
+
+
+
+
+
 
 def main():
-  print(f'Welcome to {Fore.YELLOW}Another Madlib Game')
+  """
+  Main program function
+  """
+
+  # os.system('cls' if os.name == 'nt' else 'clear')
+  print(f'''
+  {Fore.GREEN}Welcome to {Fore.YELLOW}Another Madlib Game!
+
+  {Fore.GREEN}Just enter word which asked by the program and try not to make mistakes.
+  If you do, blame is on you!
+  If you try to cheat, the program will ask you to type a correct word again and again
+  ''')
+  options = ['1. Start', '2. Quit']
+  main_menu = TerminalMenu(options)
+  quitting = False
+  while quitting == False:
+    optionsIndex = main_menu.show()
+    optionsChoice = options[optionsIndex]
+    if optionsChoice == 'Quit':
+      quitting = True
+    else:
+      print(optionsChoice)
+
+
+
+
+
+  print(madlib)
+
+
+
+main()
