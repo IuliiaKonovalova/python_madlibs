@@ -281,6 +281,27 @@ def run_the_time_error():
 run_the_time_error()
 
 
+def draw_holes(mean):
+  height = 7
+  length = 21
+
+  # Upper part of the mat
+  # print('*' * length)
+  sth1 = '*' * length
+  list1 = []
+  for i in range(1, height, 2):
+      sth2 = (i * (' ')).center(length, '*')
+      list1.append(sth2)
+
+  sth3 = "     ".upper().center(length, '*')
+
+  list2 = []
+  for j in range(height-2, -1, -2):
+      sth4 = (j * (' ')).center(length, '*')
+      list2.append(sth4)
+  # str_l = 
+  return f'{Fore.YELLOW}{sth1}\n{list1[0]}\n{list1[1]}\n{list1[2]}\n{sth3} {Fore.WHITE}{mean}\n{Fore.YELLOW}{list2[0]}\n{list2[1]}\n{list2[2]}\n{sth1}{Fore.RESET}'
+
 def main_mad():
   adj1 = 'easy-going'
   noun1 = 'cat'
@@ -362,37 +383,60 @@ def main_mad():
 {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to a {adj2} {noun2}.
 {formatting_pronoun(noun1).capitalize()} noticed {famous_person.title()} {verb_infinitive(verb2)}.
 {choosing_article(noun1).capitalize()} and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
-"It will cost an arm and a leg!" - said the {noun1}.
-"Do not worry!
-I have a lot of {plural_noun(noun4)}!
-I can afford it!"
-"As you wish, {famous_person.title()}
-You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
-If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)}, let's get it!" - said the {noun1}.
+{Fore.BLUE}
+"It will cost an arm and a leg!"{Fore.WHITE} - said the {noun1}.
+{Fore.YELLOW}
+"Do not worry! I have a lot of {plural_noun(noun4)}! I can afford it!"
+{Fore.BLUE}
+"As you wish, {famous_person.title()}. You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
+
+If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)}, let's get it!"{Fore.WHITE} - said the {noun1}.
 And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.
 It was already night when {famous_person.title()} noticed {choosing_article(size_adjective2)} {noun6}.
-"Can you see it? We are here!" - said {famous_person.title()} while pointing at the {noun6}.
-"Oh, yes! But look at this old {noun7} in the bushes!" - says the {noun1}.
+{Fore.BLUE}
+"Can you see it? We are here!"{Fore.WHITE} - said {famous_person.title()} while pointing at the {noun6}.
+{Fore.BLUE}
+"Oh, yes! But look at this old {noun7} in the bushes!"{Fore.WHITE} - says the {noun1}.
+
 The old {noun7} started walking slowly towards {famous_person.title()} and the {noun1}.
 Then, they saw that {formatting_pronoun(noun7)} was carrying a golden coin.
 As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} started{verb_infinitive(verb4)} and handed out that golden coin to them and left silently.
 {famous_person.title()} looked at the coin...
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
-"What is written there?" - asked the {noun1}.
-"{idioms_list[0]}" - read out loud {famous_person.title()}.
-"That's strange..." - {famous_person.title()} added.
-"Why the text and the rose on the coin are {color_adjective2}?" - pondered the {adj1} {noun1}.
-"Maybe because the {size_adjective2} {noun6} is {color_adjective2}?" - {famous_person.title()} replayed to {formatting_personal_pronoun(noun1)}.
-As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, they both yelled:
-"That's it!"
-On the front side of the {choosing_article(size_adjective2)} {color_adjective2} {noun6} were a picture of a small version of the {choosing_article(size_adjective2)} {color_adjective2} {noun6} and 4 holes with sentences above them.
-"As i get it, we just need to {verb1} and throw our coin to the right hole."
+
+{Fore.BLUE}"What is written there?"{Fore.WHITE} - asked the {noun1}.
+{Fore.YELLOW}"{idioms_list[0]}"{Fore.WHITE} - read out loud {famous_person.title()}.
+{Fore.YELLOW}"That's strange..."{Fore.WHITE} - {famous_person.title()} added.
+{Fore.BLUE}"Why the text and the rose on the coin are {color_adjective2}?"{Fore.WHITE} - pondered the {adj1} {noun1}.
+{Fore.YELLOW}"Maybe because the {size_adjective2} {noun6} is {color_adjective2}?"{Fore.WHITE} - {famous_person.title()} replied to {formatting_personal_pronoun(noun1)}.
+As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, the {noun1} yelled:
+{Fore.BLUE}"That's it!"
+{Fore.WHITE}On the front side of the {size_adjective2} {color_adjective2} {noun6} were a picture of a small version of the {choosing_article(size_adjective2)} {color_adjective2} {noun6} and a plate with 4 holes with sentences near them.
+{draw_holes(idioms_list[1][0])}
+{draw_holes(idioms_list[1][1])}
+{draw_holes(idioms_list[1][2])}
+{draw_holes(idioms_list[1][3])}
+{Fore.YELLOW}"As I get it, we just need to {verb4} and throw our coin to the right hole."{Fore.WHITE} - said {famous_person.title()}.
+{Fore.BLUE}"Why do we need to {verb4} before throwing this coin?"{Fore.WHITE} - asked the {adj1} {noun1}.
+{Fore.YELLOW}"That's obvious! Because the old {noun7} was {verb_infinitive(verb4)}!"
+{Fore.BLUE}"Ok! Now you have to figure out which whole is needed."
+{Fore.YELLOW}"Why me? I am not so savvy?"
+{Fore.BLUE}"Look! I am just a poor {noun1}! I have only {plural_noun(noun5)}! No brain!
+So it is you, {famous_person.title()}, who have to make a decision!"
+{Fore.YELLOW}"Why me?"
+{Fore.BLUE}"It's deffinitely a strange question! The answer is simple -  because you have a lot of {plural_noun(noun4)} and you are famous!"
+{Fore.YELLOW}"that's fair..."
+
 
 
 1. {idioms_list[1][0]}
 2. {idioms_list[1][1]}
 3. {idioms_list[1][2]}
 4. {idioms_list[1][3]}
+
+
+
+
 '''
   print(madlib)
 
@@ -401,9 +445,9 @@ On the front side of the {choosing_article(size_adjective2)} {color_adjective2} 
 
 def show_the_rules():
   print(f'''
-  {Fore.YELLOW}1. {Fore.GREEN}Follow the instructions!
-  {Fore.YELLOW}2. {Fore.GREEN}Type the words correctly!
-  {Fore.YELLOW}3. {Fore.GREEN}Don\'t cheat!
+  {Fore.YELLOW}1. {Fore.WHITE}Follow the instructions!
+  {Fore.YELLOW}2. {Fore.WHITE}Type the words correctly!
+  {Fore.YELLOW}3. {Fore.WHITE}Don\'t cheat!
   ''')
 
 
