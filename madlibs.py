@@ -389,8 +389,8 @@ def main_mad():
 "Do not worry! I have a lot of {plural_noun(noun4)}! I can afford it!"
 {Fore.BLUE}
 "As you wish, {famous_person.title()}. You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
-
 If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)}, let's get it!"{Fore.WHITE} - said the {noun1}.
+
 And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.
 It was already night when {famous_person.title()} noticed {choosing_article(size_adjective2)} {noun6}.
 {Fore.BLUE}
@@ -405,27 +405,46 @@ As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronou
 There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 
 {Fore.BLUE}"What is written there?"{Fore.WHITE} - asked the {noun1}.
+
 {Fore.YELLOW}"{idioms_list[0]}"{Fore.WHITE} - read out loud {famous_person.title()}.
+
 {Fore.YELLOW}"That's strange..."{Fore.WHITE} - {famous_person.title()} added.
+
 {Fore.BLUE}"Why the text and the rose on the coin are {color_adjective2}?"{Fore.WHITE} - pondered the {adj1} {noun1}.
+
 {Fore.YELLOW}"Maybe because the {size_adjective2} {noun6} is {color_adjective2}?"{Fore.WHITE} - {famous_person.title()} replied to {formatting_personal_pronoun(noun1)}.
+
 As soon as they got closer to the {size_adjective2} {color_adjective2} {noun6}, the {noun1} yelled:
+
 {Fore.BLUE}"That's it!"
+
 {Fore.WHITE}On the front side of the {size_adjective2} {color_adjective2} {noun6} were a picture of a small version of the {choosing_article(size_adjective2)} {color_adjective2} {noun6} and a plate with 4 holes with sentences near them.
 {draw_holes(idioms_list[1][0])}
 {draw_holes(idioms_list[1][1])}
 {draw_holes(idioms_list[1][2])}
 {draw_holes(idioms_list[1][3])}
-{Fore.YELLOW}"As I get it, we just need to {verb4} and throw our coin to the right hole."{Fore.WHITE} - said {famous_person.title()}.
+
+{Fore.YELLOW}"As I've got it, we just need to {verb4} and throw our coin into the right hole."{Fore.WHITE} - said {famous_person.title()}.
+
 {Fore.BLUE}"Why do we need to {verb4} before throwing this coin?"{Fore.WHITE} - asked the {adj1} {noun1}.
+
 {Fore.YELLOW}"That's obvious! Because the old {noun7} was {verb_infinitive(verb4)}!"
+
 {Fore.BLUE}"Ok! Now you have to figure out which whole is needed."
+
 {Fore.YELLOW}"Why me? I am not so savvy?"
+
 {Fore.BLUE}"Look! I am just a poor {noun1}! I have only {plural_noun(noun5)}! No brain!
 So it is you, {famous_person.title()}, who have to make a decision!"
+
 {Fore.YELLOW}"Why me?"
+
 {Fore.BLUE}"It's deffinitely a strange question! The answer is simple -  because you have a lot of {plural_noun(noun4)} and you are famous!"
-{Fore.YELLOW}"that's fair..."
+
+{Fore.YELLOW}"That's fair... But still my {plural_noun(noun4)} are not helpful here. Let me think...
+If I were an old {noun7}, what would I choose..."
+
+{Fore.WHITE}After pondering for an hour, {famous_person.title()} took a coin and through it into the hole with the sentence {idioms_dictionary.get(idioms_list[0])}.
 
 
 
