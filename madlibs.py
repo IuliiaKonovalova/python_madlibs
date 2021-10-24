@@ -445,6 +445,7 @@ So it is you, {famous_person.title()}, who have to make a decision!"
 If I were an old {noun7}, what would I choose..."
 
 {Fore.WHITE}After pondering for an hour, {famous_person.title()} took a coin and through it into the hole with the sentence {idioms_dictionary.get(idioms_list[0])}.
+As soon as the coin disappeared in the hole, the groundunder them open up and swallowed them literally.
 
 
 
