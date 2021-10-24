@@ -23,13 +23,15 @@ This small project was created based on [Kylie Ying's](https://www.youtube.com/c
 1. Add additional file for gender words dictionary.
 
 1. Add additional file for idioms dictionary.
-
+----
 ## Technologies were used:
 
 - [Python](https://www.python.org/) was used as the the core language of the project.
 - [NLTK Package](https://www.nltk.org/) was used in order to be able to work with pattern package.
 - [Pattern Package](https://stackabuse.com/python-for-nlp-introduction-to-the-pattern-library/) was used to pluralize nouns where it is needed.
-
+- [Simple Terminal Menu](https://pypi.org/project/simple-term-menu/) was used to implement menu.
+- [Colorama](https://pypi.org/project/colorama/) was used to add colors and styles to the project.
+ ---
 ## Credits
 
 - List of Uncountable Nouns was made based in the [7ESL](https://7esl.com/uncountable-nouns/).
