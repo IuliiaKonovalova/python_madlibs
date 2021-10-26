@@ -164,6 +164,12 @@ def random_idiom():
 idioms_list = random_idiom()
 
 
+def choose_correct_form_be(word):
+    if word in uncountable_nouns:
+        return 'is'
+    return 'are'
+
+
 def run_the_time_error():
     """
     Prevent "RuntimeError: generator raised StopIteration"
@@ -199,7 +205,7 @@ def draw_holes(mean):
         sth4 = (j * (' ')).center(length, '*')
         list2.append(sth4)
 
-    return f'{Fore.YELLOW}{sth1}\n{list1[0]}\n{list1[1]}\n{list1[2]}\n{sth3} {Fore.WHITE}{mean}\n{Fore.YELLOW}{list2[0]}\n{list2[1]}\n{list2[2]}\n{sth1}{Fore.RESET}'
+    return f'{Fore.YELLOW}{sth1}\n    {list1[0]}\n    {list1[1]}\n    {list1[2]}\n    {sth3} {Fore.RED}{mean}\n    {Fore.YELLOW}{list2[0]}\n    {list2[1]}\n    {list2[2]}\n    {sth1}{Fore.RESET}'
 
 def main_mad():
     adj1 = 'easy-going'
@@ -213,8 +219,8 @@ def main_mad():
     noun3 = 'pill'
     size_adjective1 = 'huge'
     color_adjective1 = 'red'
-    noun4 = 'pill'
-    noun5 = 'compass'
+    noun4 = 'cream'
+    noun5 = 'bus'
     size_adjective2 = 'tiny'
     color_adjective2 = 'blue'
     noun6 = 'stamp'
@@ -331,7 +337,7 @@ def main_mad():
 
     {Fore.BLUE}"Ok! Now you have to figure out which whole is needed."
 
-    {Fore.YELLOW}"Why me? I am not so savvy?"
+    {Fore.YELLOW}"Why me? I am not so savvy!"
 
     {Fore.BLUE}"Look! I am just a poor {noun1}! I have only {plural_noun(noun5)}! No brain!
     So it is you, {famous_person.title()}, who have to make a decision!"
@@ -340,23 +346,17 @@ def main_mad():
 
     {Fore.BLUE}"It's deffinitely a strange question! The answer is simple -  because you have a lot of {plural_noun(noun4)} and you are famous!"
 
-    {Fore.YELLOW}"That's fair... But still my {plural_noun(noun4)} are not helpful here. Let me think...
+    {Fore.YELLOW}"That's fair... But still my {plural_noun(noun4)} {choose_correct_form_be(noun4)} not helpful here. Let me think...
     If I were an old {noun7}, what would I choose..."
 
-    {Fore.WHITE}After pondering for an hour, {famous_person.title()} took a coin and through it into the hole with the sentence {idioms_dictionary.get(idioms_list[0])}.
-    As soon as the coin disappeared in the hole, the ground opened up under them and swallowed them literally.
-    They were falling down to nowhere... no light, no even old, they saw a lot {plural_noun(noun7)}!
-
-
-
+    {Fore.WHITE}After pondering for an hour, {famous_person.title()} took a coin and through it into the hole with the sentence {Fore.RED}"{idioms_dictionary.get(idioms_list[0])}".
+    {Fore.WHITE}As soon as the coin disappeared in the hole, the ground opened up under them and swallowed them literally.
+    They were falling down to nowhere... no light, no even a soul, they saw a lot {plural_noun(noun7)}!
 
     1. {idioms_list[1][0]}
     2. {idioms_list[1][1]}
     3. {idioms_list[1][2]}
     4. {idioms_list[1][3]}
-
-
-
 
     '''
     print(madlib)
@@ -370,6 +370,7 @@ def show_the_rules():
     {Fore.YELLOW}2. {Fore.WHITE}Type the words correctly!
     {Fore.YELLOW}3. {Fore.WHITE}Don\'t cheat!
     ''')
+
 
 
 
