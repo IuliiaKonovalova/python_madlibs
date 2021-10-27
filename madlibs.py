@@ -208,84 +208,84 @@ def draw_holes(mean):
     return f'{Fore.YELLOW}{sth1}\n    {list1[0]}\n    {list1[1]}\n    {list1[2]}\n    {sth3} {Fore.RED}{mean}\n    {Fore.YELLOW}{list2[0]}\n    {list2[1]}\n    {list2[2]}\n    {sth1}{Fore.RESET}'
 
 def main_mad():
-    adj1 = 'easy-going'
-    noun1 = 'cat'
-    verb1 = 'show'
-    adj2 = 'furry'
-    noun2 = 'robot'
-    famous_person = 'bjorn'
-    verb2 = 'stop'
-    verb3 = 'cry'
-    noun3 = 'pill'
-    size_adjective1 = 'huge'
-    color_adjective1 = 'red'
-    noun4 = 'cream'
-    noun5 = 'bus'
-    size_adjective2 = 'tiny'
-    color_adjective2 = 'blue'
-    noun6 = 'stamp'
-    noun7 = 'queen'
-    verb4 = 'sneeze'
+    # adj1 = 'easy-going'
+    # noun1 = 'cat'
+    # verb1 = 'show'
+    # adj2 = 'furry'
+    # noun2 = 'robot'
+    # famous_person = 'bjorn'
+    # verb2 = 'stop'
+    # verb3 = 'cry'
+    # noun3 = 'pill'
+    # size_adjective1 = 'huge'
+    # color_adjective1 = 'red'
+    # noun4 = 'cream'
+    # noun5 = 'bus'
+    # size_adjective2 = 'tiny'
+    # color_adjective2 = 'blue'
+    # noun6 = 'stamp'
+    # noun7 = 'queen'
+    # verb4 = 'sneeze'
 
-  # adj1 = ''
-  # noun1 = ''
-  # verb1 = ''
-  # adj2 = ''
-  # noun2 = ''
-  # famous_person = ''
-  # verb2 = ''
-  # verb3 = ''
-  # noun3 = ''
-  # size_adjective1 = ''
-  # color_adjective1 = ''
-  # noun4 = ''
-  # noun5 = ''
-  # size_adjective2 = ''
-  # color_adjective2 = ''
-  # noun6 = ''
-  # noun7 = ''
-  # verb4 = ''
+    adj1 = ''
+    noun1 = ''
+    verb1 = ''
+    adj2 = ''
+    noun2 = ''
+    famous_person = ''
+    verb2 = ''
+    verb3 = ''
+    noun3 = ''
+    size_adjective1 = ''
+    color_adjective1 = ''
+    noun4 = ''
+    noun5 = ''
+    size_adjective2 = ''
+    color_adjective2 = ''
+    noun6 = ''
+    noun7 = ''
+    verb4 = ''
 
-  # while not (len(adj1) >= 2 and adj1.isalpha()):
-  #     adj1 = input('Type an adjective: ')
-  # while not (len(noun1) >= 2 and noun1.isalpha()):
-  #     noun1 = input('Type a noun (living thing): ')
-  # while not (len(verb1) >= 2 and verb1.isalpha()):
-  #     verb1 = input('Type a verb: ')
-  # while not (len(adj2) >= 2 and adj2.isalpha()):
-  #     adj2 = input('Type an adjective: ')
-  # while not (len(noun2) >= 2 and noun2.isalpha()):
-  #     noun2 = input('Type a noun: ')
-  # while not (len(famous_person) >= 2 and famous_person.isalpha()):
-  #     famous_person = input("Type a famous person: ")
-  # while not (len(verb2) >= 2 and verb2.isalpha()):
-  #     verb2 = input('Type a verb: ')
-  # while not (len(verb3) >= 2 and verb3.isalpha()):
-  #     verb3 = input('Type a verb: ')
-  # while not (len(noun3) >= 2 and noun3.isalpha()):
-  #     noun3 = input('Type a noun: ')
-  # while not (len(size_adjective1) >= 2 and size_adjective1.isalpha()):
-  #     size_adjective1 = input('Type a size adjective: ')
-  # while not (len(color_adjective1) >= 2 and color_adjective1.isalpha()):
-  #     color_adjective1 = input('Type a color adjective: ')
-  # while not (len(noun4) >= 2 and noun4.isalpha()):
-  #     noun4 = input('Type a noun: ')
-  # while not (len(noun5) >= 2 and noun5.isalpha()):
-  #     noun5 = input('Type a noun: ')
-  # while not (len(size_adjective2) >= 2 and size_adjective2.isalpha()):
-  #     size_adjective2 = input('Type a size adjective: ')
-  # while not (len(color_adjective2) >= 2 and color_adjective2.isalpha()):
-  #     color_adjective2 = input('Type a color adjective: ')
-  # while not (len(noun6) >= 2 and noun6.isalpha()):
-  #     noun6 = input('Type a noun: ')
-  # while not (len(noun7) >= 2 and noun7.isalpha()):
-  #     noun7 = input('Type a noun: ')
-  # while not (len(verb4) >= 2 and verb4.isalpha()):
-  #     verb4 = input('Type a verb: ')
+    while not (len(adj1) >= 2 and adj1.isalpha()):
+        adj1 = input('Type an adjective: ')
+    while not (len(noun1) >= 2 and noun1.isalpha()):
+        noun1 = input('Type a noun (living thing): ')
+    while not (len(verb1) >= 2 and verb1.isalpha()):
+        verb1 = input('Type a verb: ')
+    while not (len(adj2) >= 2 and adj2.isalpha()):
+        adj2 = input('Type an adjective: ')
+    while not (len(noun2) >= 2 and noun2.isalpha()):
+        noun2 = input('Type a noun: ')
+    while not (len(famous_person) >= 2 and famous_person.isalpha()):
+        famous_person = input("Type a famous person: ")
+    while not (len(verb2) >= 2 and verb2.isalpha()):
+        verb2 = input('Type a verb: ')
+    while not (len(verb3) >= 2 and verb3.isalpha()):
+        verb3 = input('Type a verb: ')
+    while not (len(noun3) >= 2 and noun3.isalpha()):
+        noun3 = input('Type a noun: ')
+    while not (len(size_adjective1) >= 2 and size_adjective1.isalpha()):
+        size_adjective1 = input('Type a size adjective: ')
+    while not (len(color_adjective1) >= 2 and color_adjective1.isalpha()):
+        color_adjective1 = input('Type a color adjective: ')
+    while not (len(noun4) >= 2 and noun4.isalpha()):
+        noun4 = input('Type a noun: ')
+    while not (len(noun5) >= 2 and noun5.isalpha()):
+        noun5 = input('Type a noun: ')
+    while not (len(size_adjective2) >= 2 and size_adjective2.isalpha()):
+        size_adjective2 = input('Type a size adjective: ')
+    while not (len(color_adjective2) >= 2 and color_adjective2.isalpha()):
+        color_adjective2 = input('Type a color adjective: ')
+    while not (len(noun6) >= 2 and noun6.isalpha()):
+        noun6 = input('Type a noun: ')
+    while not (len(noun7) >= 2 and noun7.isalpha()):
+        noun7 = input('Type a noun (living thing): ')
+    while not (len(verb4) >= 2 and verb4.isalpha()):
+        verb4 = input('Type a verb: ')
 
     madlib = f'''
     {Style.BRIGHT}
-    {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to a {adj2} {noun2}.
+    {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to {choosing_article(adj2)} {noun2}.
     {formatting_pronoun(noun1).capitalize()} noticed {famous_person.title()} {verb_infinitive(verb2)}.
     {choosing_article(noun1).capitalize()} and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1)} {color_adjective1} {noun3} together.
     {Fore.BLUE}
@@ -305,7 +305,7 @@ def main_mad():
 
     The old {noun7} started walking slowly towards {famous_person.title()} and the {noun1}.
     Then, they saw that {formatting_pronoun(noun7)} was carrying a golden coin.
-    As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} started{verb_infinitive(verb4)} and handed out that golden coin to them and left silently.
+    As soon as {formatting_pronoun(noun7)} reached our travelers, {formatting_pronoun(noun7)} started {verb_infinitive(verb4)} and handed out that golden coin to them and left silently.
     {famous_person.title()} looked at the coin...
     There were several words colored in {color_adjective2} and a big {color_adjective2} rose drawn under them.
 
@@ -349,10 +349,19 @@ def main_mad():
     {Fore.YELLOW}"That's fair... But still my {plural_noun(noun4)} {choose_correct_form_be(noun4)} not helpful here. Let me think...
     If I were an old {noun7}, what would I choose..."
 
-    {Fore.WHITE}After pondering for an hour, {famous_person.title()} took a coin and through it into the hole with the sentence {Fore.RED}"{idioms_dictionary.get(idioms_list[0])}".
-    {Fore.WHITE}As soon as the coin disappeared in the hole, the ground opened up under them and swallowed them literally.
-    They were falling down to nowhere... no light, no even a soul, they saw a lot {plural_noun(noun7)}!
+    {Fore.WHITE}After pondering for an hour, {famous_person.title()} took a coin and through it into the hole with the sentence {Fore.RED}"{idioms_dictionary.get(idioms_list[0])}"{Fore.WHITE}.
+    As soon as the coin disappeared in the hole, the ground opened up under them and swallowed them literally.
+    They were falling down to nowhere... no light, no even a soul, just darkness everywhere...
+    Eventually, the reached the ground.
+    As luck would have it, they survived!
 
+    {Fore.BLUE}"Why all of this is happenning to us?"{Fore.WHITE} - yelled the already terrified {noun1}.
+    {Fore.YELLOW}"I sincerely can't get my head around this as well! It might be all about {choosing_article(size_adjective1)} {color_adjective1} {noun3}..."{Fore.WHITE} - replied {famous_person.title()}.
+    {Fore.BLUE}"Yeah! I heard the the quality of the {size_adjective1} {color_adjective1} {noun3} is marvelous!"{Fore.WHITE}.
+    Had it not been for the lack of light, they would have realized on time that they were not alone.
+    Then the light turned on and they saw everything...
+    They were in a huge room, where everything was colored in {color_adjective2}. They were surrounded by millions of old {plural_noun(noun7)}
+    
     1. {idioms_list[1][0]}
     2. {idioms_list[1][1]}
     3. {idioms_list[1][2]}
