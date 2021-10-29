@@ -112,17 +112,13 @@ def choosing_article(*words):
     """
     Checks which article to use before the word and place the article before it
     """
-    print(words[-1])
     if words[-1] in uncountable_nouns:
             return ' '.join(words)
     else:
-        if words[-1] in uncountable_nouns:
-            return ' '.join(words)
-        else:
-            if words[0][0] in dictionary_letters['vowels']:
-                return 'an ' + ' '.join(words)
-            else: 
-                return 'a ' + ' '.join(words)
+        if words[0][0] in dictionary_letters['vowels']:
+            return 'an ' + ' '.join(words)
+        else: 
+            return 'a ' + ' '.join(words)
 
 
 
@@ -291,9 +287,9 @@ def main_mad():
 
     madlib = f'''
     {Style.BRIGHT}
-    {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to {choosing_article(adj2)} {noun2}.
+    {choosing_article(adj1).capitalize()} {noun1} {conjugate(verb1, tense = PAST)} and went to {choosing_article(adj2, noun2)}.
     {formatting_pronoun(noun1).capitalize()} noticed {famous_person.title()} {verb_infinitive(verb2)}.
-    {choosing_article(noun1).capitalize()} and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1, color_adjective1, noun3)}  together.
+    {choosing_article(noun1).capitalize()} and {famous_person.title()} decided to {verb3} and have {choosing_article(size_adjective1, color_adjective1, noun3)} together.
     {Fore.BLUE}
     "It will cost an arm and a leg!"{Fore.WHITE} - said the {noun1}.
     {Fore.YELLOW}
@@ -302,8 +298,8 @@ def main_mad():
     "As you wish, {famous_person.title()}. You see, I am just a poor {noun1}... So I have only {plural_noun(noun5)}.
     If you want to share {choosing_a_quantifier(noun4)} {plural_noun(noun4)}, let's get it!"{Fore.WHITE} - said the {noun1}.
 
-    And they started walking towards {choosing_article(size_adjective2)} {color_adjective2} {noun6}.
-    It was already night when {famous_person.title()} noticed {choosing_article(size_adjective2)} {noun6}.
+    And they started walking towards {choosing_article(size_adjective2, color_adjective2, noun6)}.
+    It was already night when {famous_person.title()} noticed {choosing_article(size_adjective2, noun6)}.
     {Fore.BLUE}
     "Can you see it? We are here!"{Fore.WHITE} - said {famous_person.title()} while pointing at the {noun6}.
     {Fore.BLUE}
@@ -329,7 +325,7 @@ def main_mad():
 
     {Fore.BLUE}"That's it!"
 
-    {Fore.WHITE}On the front side of the {size_adjective2} {color_adjective2} {noun6} were a picture of a small version of the {choosing_article(size_adjective2)} {color_adjective2} {noun6} and a plate with 4 holes with sentences near them.
+    {Fore.WHITE}On the front side of the {size_adjective2} {color_adjective2} {noun6} were a picture of a small version of the {choosing_article(size_adjective2, color_adjective2, noun6)} and a plate with 4 holes with sentences near them.
     {draw_holes(idioms_list[1][0])}
     {draw_holes(idioms_list[1][1])}
     {draw_holes(idioms_list[1][2])}
@@ -363,7 +359,7 @@ def main_mad():
 
     {Fore.BLUE}"Why all of this is happenning to us?"{Fore.WHITE} - yelled the already terrified {noun1}.
 
-    {Fore.YELLOW}"I sincerely can't get my head around this as well! It might be all about {choosing_article(size_adjective1)} {color_adjective1} {noun3}..."{Fore.WHITE} - replied {famous_person.title()}.
+    {Fore.YELLOW}"I sincerely can't get my head around this as well! It might be all about {choosing_article(size_adjective1, color_adjective1, noun3)}..."{Fore.WHITE} - replied {famous_person.title()}.
 
     {Fore.BLUE}"Yeah! I heard the the quality of the {size_adjective1} {color_adjective1} {noun3} is marvelous!"{Fore.WHITE}.
 
@@ -377,8 +373,20 @@ def main_mad():
 
     {Fore.RED}"Silence!"{Fore.WHITE} - one of the old {plural_noun(noun7)} ordered. - {Fore.RED}"You think you are allowed to be cocky!?"
 
-    {Fore.YELLOW}"Ok, let's make a deal! You see, I am in possession of lots of {plural_noun(noun4)}! So I will give you half of my fortune if you let us go with {choosing_article(size_adjective1)} {color_adjective1} {noun3}"
+    {Fore.YELLOW}"Ok, let's make a deal! You see, I am in possession of lots of {plural_noun(noun4)}! So I will give you half of my fortune if you let us go with {choosing_article(size_adjective1, color_adjective1, noun3)}"
 
+    {Fore.RED}"Pathetic!"{Fore.WHITE} - the same old {plural_noun(noun7)} responded - {Fore.RED}Your {plural_noun(noun4)} {choose_correct_form_be(noun4)} nothing! But you two stole the golden coin!"
+
+    {Fore.BLUE}"Excuse me, sir"{Fore.WHITE} - mumbled {noun1} - {Fore.BLUE}"That's not true! One of the you gave it to us, {conjugate(verb4, tense = PAST)}, and left silently".
+
+    {Fore.RED}"listen! You don't have the right to take anything from our folks! But you did! Moreover, you also performed our thing!"
+    
+    {Fore.BLUE}"What thing? We did nothing! We just wanted to have {choosing_article(size_adjective1, color_adjective1, noun3)} together!"
+
+    {Fore.RED}"You {conjugate(verb4, tense = PAST)} on perpose!"{Fore.WHITE} - the old {noun7} turned to the old {plural_noun(noun7)} who were holding spears - {Fore.RED}"Put them in prison! Now!".
+
+    {Fore.WHITE}The {plural_noun(noun7)} with spears stepped forward and grabbed our travelers.
+    They were dragging them through endless {color_adjective2} tunnel.
 
     
     1. {idioms_list[1][0]}
